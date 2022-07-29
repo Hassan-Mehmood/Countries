@@ -1,13 +1,80 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+:root {
+  --DarkBlue: hsl(209, 23%, 22%); /*Dark mode elements Done*/
+  --VeryDarkBlue: hsl(207, 26%, 17%); /*(Dark Mode Background) Done*/
+  --White: hsl(0, 0%, 100%); /* (Dark Mode Text & Light Mode Elements) Done*/
+  /* --VeryDarkBlue: hsl(200, 15%, 8%); (Light Mode Text) */
+  --DarkGray: hsl(0, 0%, 52%); /* (Light Mode Input)*/
+  --VeryLightGray: hsl(0, 0%, 97%); /*Light Mode Background)*/
+
+  /* Font Sizes*/
+  --FSHomepageItems: 14px;
+  --FSDetailPage: 16px;
+
+  /* Fonts*/
+  --NunitoSans: "Nunito Sans", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body * {
+  font-family: var(--NunitoSans);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 64rem; /* 1024px */
+  width: 90%;
+  margin: 0 auto;
+}
+
+.backgroundLight {
+  background-color: var(--White);
+  color: var(--VeryDarkBlue);
+}
+.backgroundDark {
+  background-color: var(--VeryDarkBlue);
+  color: var(--White);
+}
+
+.elementDark {
+  background-color: var(--DarkBlue);
+  color: var(--White);
+}
+
+.elementLight {
+  background-color: var(--White);
+  color: var(--DarkBlue);
+}
+
+.backgroundLightGray {
+  background-color: var(--VeryLightGray);
+}
+
+.backgroundDarkBlue {
+  background-color: var(--DarkBlue);
+  color: var(--White);
+}
+
+.textWhite {
+  color: var(--White);
+}
+
+.darkSelect {
+  border: 1px solid;
+}
+
+.cardLink {
+  color: var(--VeryDarkBlue);
+  text-decoration: none;
 }

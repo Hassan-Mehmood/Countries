@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { createContext, useState } from "react";
+import Country from "./Pages/Country";
+import Home from "./Pages/Home";
+import Header from "./components/Header/Header";
+
+export const SearchContext = createContext();
 
 function App() {
+  const [theme, setTheme] = useState("light");
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filterRegion, setFilterRegion] = useState("All");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <SearchContext.Provider
+        value={{ searchTerm, setSearchTerm, filterRegion, setFilterRegion }}
+      >
+        <BrowserRouter>
+          <Header theme={theme} setTheme={setTheme} />
+          <Routes>
+            <Route
+              path="/"
+              element={<Home theme={theme} setTheme={setTheme} />}
+            ></Route>
+            <Route
+              path="/country/:name"
+              element={<Country theme={theme} setTheme={setTheme} />}
+            ></Route>
+          </Routes>
+        </BrowserRouter>
+      </SearchContext.Provider>
     </div>
   );
 }

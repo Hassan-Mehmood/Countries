@@ -1,0 +1,27 @@
+.card {
+  max-width: 16.375rem;
+  min-height: 20.875rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.cardContent {
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+.cardContent h3 {
+  margin: 0 0 1rem 0;
+  font-weight: 900;
+}
+
+.cardContent span {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 456px) {
+  .card {
+    margin: auto;
+  }
+}

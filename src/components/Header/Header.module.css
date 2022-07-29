@@ -1,0 +1,28 @@
+:global(.flex) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  border-bottom: 1px solid var(--DarkGray);
+}
+
+.headContent {
+  min-height: 5.0625rem;
+}
+
+.headContent h2 {
+  font-family: var(--NunitoSans);
+  font-size: clamp(1rem, 5vw, 1.5rem);
+}
+
+.themeBtn {
+  font-size: 0.875rem; /*? 14px */
+  cursor: pointer;
+}
+
+.themeBtn span {
+  font-weight: 600;
+  font-size: 16px;
+}
